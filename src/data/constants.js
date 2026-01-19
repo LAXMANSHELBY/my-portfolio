@@ -1,9 +1,14 @@
+import { FaJava,FaGitlab, FaPython, FaReact, FaHtml5, FaCss3Alt, FaGithub, FaDocker } from "react-icons/fa";
+import { SiJavascript, SiTailwindcss, SiDjango, SiFlask, SiMysql, SiVercel } from "react-icons/si";
+import { SiAmazonaws } from "react-icons/si";
+
+
 export const Bio = {
   name: "Laxman Sunkari",
   roles: [
     "Frontend Developer",
     "AR/VR Developer ",
-    " JAVA Devloper – Entry Level",
+    " JAVA Devloper ",
     "AI Enthusiast",
   ],
   description:
@@ -12,58 +17,60 @@ export const Bio = {
   resume:"/Laxman_CV.pdf",
 
   linkedin: "https://linkedin.com/in/laxman-s-5447a5327",
-  twitter: "",
-  insta: "",
+  twitter: "https://x.com/ShelbyLaxman",
+  insta: "https://www.instagram.com/laxman.balu_7?igsh=MXR1ejlycnl2bnkyMg==",
   facebook: "",
 };
-export const skills = [ {
+export const skills = [
+  {
     title: "Languages",
     skills: [
-      { name: "JAVA CORE" },
-      { name: "PYTHON" },
-      { name: "SQL" },
-      { name: "R-PROGRAMING" },
+      { name: "JAVA CORE", icon: FaJava },
+      { name: "PYTHON", icon: FaPython },
+      { name: "SQL", icon: SiMysql },
+      { name: "R-PROGRAMING", icon: FaReact }, // change if needed
     ],
   },
-  {
-    title: "Java Developer | Algorithmic Problem-Solving & DSA",
-    skills: [
-      { name: "ARRAYS" },
-      { name: "Recursion & Backtracking" },
-      { name: "Sorting & Searching" },
-      { name: "Linked Lists" },
-      { name: "Graph & Network Algorithms"},],
-    },
-  {
-    title: "Frontend",
-    skills: [
-      { name: "React Js" },
-      { name: "HTML" },
-      { name: "CSS" },
-      { name: "JavaScript" },
-      { name: "Tailwind CSS" },
-    ],
-  },
-  {
+ {
+  title: "Frontend",
+  skills: [
+    { name: "React.js", icon: FaReact },
+    { name: "HTML", icon: FaHtml5 },
+    { name: "CSS", icon: FaCss3Alt },
+    { name: "JavaScript", icon: SiJavascript },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+  ],
+},
+
+   {
     title: "Backend",
     skills: [
-      { name: "Python" },
-      { name: "Flask" },
-      { name: "Django" },
-      { name: "SQL" },
+      { name: "Python", icon: FaPython },
+      { name: "Flask", icon: SiFlask },
+      { name: "Django", icon: SiDjango },
+      { name: "SQL", icon: SiMysql },
     ],
   },
   {
-    title: "DevOps & Tools",
+  title: "DevOps & Tools",
+  skills: [
+    { name: "GitHub", icon: FaGithub },
+    { name: "Docker", icon: FaDocker },
+    { name: "GITLAB", icon: FaGitlab },
+    { name: "Vercel", icon: SiVercel },
+  ],
+}
+,
+    {
+    title: "Java Developer | Algorithmic Problem-Solving & DSA",
     skills: [
-      { name: "GitHub" },
-      { name: "Docker" },
-      { name: "VS Code" },
-      { name: "Vercel" },
-      { name: "Render" },
+      { name: "Arrays", icon: FaJava },
+      { name: "Recursion & Backtracking", icon: FaJava },
+      { name: "Sorting & Searching", icon: FaJava },
+      { name: "Linked Lists", icon: FaJava },
+      { name: "Graph & Network Algorithms", icon: FaJava },
     ],
   },
-  
 ];
 export const experiences = [
   {
@@ -115,7 +122,7 @@ export const projects = [
     image: "",
     tags: ["Python", "PyDub", "FFmpeg", "HTML", "CSS", "JavaScript"],
     category: "web app",
-    github: "",
+    github: "https://github.com/LAXMANSHELBY/grace-audio-converter.git",
     webapp: "",
   },
   {

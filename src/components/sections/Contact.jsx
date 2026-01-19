@@ -45,7 +45,8 @@ const Desc = styled.div`
   }
 `;
 
-const ContactForm = styled.div`
+const ContactForm = styled.form`
+
   width: 95%;
   max-width: 600px;
   display: flex;
@@ -110,18 +111,19 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
-        form.current,
-        "SybVGsYS52j2TfLbi"
-      )
+  "service_hn7dcon",
+  "template_8yt219p",
+  form.current,
+  "r3H9eJSg4u4lUV5RQ"
+)
+
       .then(
         (result) => {
           alert("Message Sent");
-          form.current.result();
+          form.current.reset();
         },
         (error) => {
-          alert(error);
+          alert("Failed to send message ❌\n" + error.text);
         }
       );
   };
@@ -136,7 +138,8 @@ const Contact = () => {
         >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm onSubmit={handelSubmit}>
+       <ContactForm ref={form} onSubmit={handelSubmit}>
+
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
