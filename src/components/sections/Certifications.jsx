@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { FaCertificate } from "react-icons/fa";
+
 
 const Container = styled.div`
   display: flex;

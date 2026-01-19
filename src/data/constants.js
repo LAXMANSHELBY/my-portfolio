@@ -1,6 +1,5 @@
 import { FaJava,FaGitlab, FaPython, FaReact, FaHtml5, FaCss3Alt, FaGithub, FaDocker } from "react-icons/fa";
 import { SiJavascript, SiTailwindcss, SiDjango, SiFlask, SiMysql, SiVercel } from "react-icons/si";
-import { SiAmazonaws } from "react-icons/si";
 
 
 export const Bio = {
