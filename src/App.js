@@ -42,25 +42,21 @@ function App() {
         <Navbar />
         <Body>
           <StartCanvas />
-          <div>
-            <Hero />
+          <Hero />
 
-            {/* Main Gradient Section */}
-            <Wrapper>
-              <Skills />
-              <Experience />
-              <Certifications />
-              <Projects />
-            </Wrapper>
+          {/* Gradient section */}
+          <Wrapper>
+            <Skills />
+            <Experience />
+            <Certifications />
+            <Projects />
+          </Wrapper>
 
-            {/* Bottom Gradient Section */}
-            <Wrapper>
-              <Education />
-              <Contact />
-            </Wrapper>
+          {/* Normal section (timeline must be here) */}
+          <Education />
+          <Contact />
 
-            <Footer />
-          </div>
+          <Footer />
         </Body>
       </BrowserRouter>
     </ThemeProvider>

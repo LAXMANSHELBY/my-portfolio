@@ -5,99 +5,89 @@ import styled from "styled-components";
 const Top = styled.div`
   width: 100%;
   display: flex;
-  max-width: 100%;
   gap: 12px;
 `;
+
 const Image = styled.img`
   height: 50px;
   border-radius: 10px;
   margin-top: 4px;
-  @media only screen and (max-width: 768px) {
-    height: 40px;
-  }
 `;
+
 const Body = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
 `;
+
 const School = styled.div`
   font-size: 18px;
-  font-weight: 600px;
-  color: ${({ theme }) => theme.text_primary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 14px;
-  }
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
 `;
+
 const Degree = styled.div`
   font-size: 14px;
-  font-weight: 500px;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
+  color: ${({ theme }) => theme.text_secondary};
 `;
+
 const Date = styled.div`
   font-size: 12px;
-  font-weight: 400px;
-  color: ${({ theme }) => theme.text_secondary + 80};
-
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
+  color: ${({ theme }) => theme.text_secondary};
+  opacity: 0.7;
 `;
 
 const Description = styled.div`
-  width: 100%;
   font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
-  margin-bottom: 10px;
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
+  line-height: 1.6;
+  color: ${({ theme }) => theme.text_primary};
+  margin-top: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 `;
 
 const Grade = styled.div`
   font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-const Span = styled.div`
-  display: -webkit-box;
-  max-width: 100%;
+  color: ${({ theme }) => theme.text_secondary};
+  margin-top: 8px;
 `;
 
 const EducationCard = ({ education }) => {
   return (
     <VerticalTimelineElement
-      icon={
-        <img
-          width="100%"
-          height="100%"
-          alt={education?.school}
-          style={{ borderRadius: "50%", objectFit: "cover" }}
-          src={education?.img}
-        />
-      }
+      date={education?.date}
       contentStyle={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "12px",
-        background: "#1d1836",
-        color: "#fff",
-        boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        backgroundColor: "rgba(17, 25, 40, 0.83)",
+        background: "rgba(10, 27, 61, 0.83)",
         border: "1px solid rgba(255, 255, 255, 0.125)",
-        borderRadius: "6px",
+        borderRadius: "12px",
+        boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
+        padding: "20px",
+
+        /* 🔥 THIS FIXES YOUR BUG */
+        maxWidth: "420px",
       }}
       contentArrowStyle={{
-        borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
+        borderRight: "7px solid rgba(255, 255, 255, 0.3)",
       }}
-      date={education?.date}
+      icon={
+  <div
+    style={{
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      background: "radial-gradient(circle, #f1f1f5, #10515ad7)",
+      boxShadow: "0 0 15px rgba(168,85,247,0.8)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      color: "white",
+      fontSize: "18px",
+      fontWeight: "bold",
+    }}
+  >
+    🎓
+  </div>
+}
+
     >
       <Top>
         <Image src={education?.img} />
@@ -107,13 +97,12 @@ const EducationCard = ({ education }) => {
           <Date>{education?.date}</Date>
         </Body>
       </Top>
+
       <Grade>
-        <b>Grade : </b>
-        {education?.grade}
+        <b>Grade:</b> {education?.grade}
       </Grade>
-      <Description>
-        {education?.desc && <Span>{education.desc}</Span>}
-      </Description>
+
+      <Description>{education?.desc}</Description>
     </VerticalTimelineElement>
   );
 };

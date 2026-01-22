@@ -2,117 +2,79 @@ import React from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
-  width: 330px;
-  height: 490px;
-  background-color: ${({ theme }) => theme.card};
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  padding: 26px 20px;
+  width: 100%;
+  max-width: 340px;
+  min-height: 260px;
+  background: rgba(17, 25, 40, 0.83);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 14px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
-    filter: brightness(1.1);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: rgba(168, 85, 247, 0.45) 0px 12px 40px;
+    border-color: rgba(168, 85, 247, 0.6);
   }
 `;
-const Image = styled.img`
-  width: 100%;
-  height: 180px;
-  background-color: ${({ theme }) => theme.white};
-  border-radius: 10px;
-  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
-`;
-const Tags = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 4px;
-`;
-const Details = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  padding: 0px 2px;
-`;
-const Title = styled.div`
-  font-size: 20px;
+
+const Title = styled.h3`
+  font-size: 18px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  overflow: hidden;
-  display: -webkit-box;
-  max-width: 100%;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: ${({ theme }) => theme.text_primary};
 `;
+
 const Date = styled.div`
   font-size: 12px;
-  margin-left: 2px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 80};
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
+  color: ${({ theme }) => theme.text_secondary};
 `;
-const Description = styled.div`
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  overflow: hidden;
-  margin-top: 8px;
-  display: -webkit-box;
-  max-width: 100%;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
+
+const Description = styled.p`
+  font-size: 14px;
+  color: ${({ theme }) => theme.text_secondary};
+  line-height: 1.6;
 `;
-const Members = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
+
+const Tech = styled.div`
+  font-size: 13px;
+  color: #a855f7;
+  font-weight: 500;
 `;
-const Avatar = styled.img`
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-left: -10px;
-  background-color: ${({ theme }) => theme.white};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 3px solid ${({ theme }) => theme.card};
-`;
-const Button = styled.a`
-  color: ${({ theme }) => theme.primary};
-  text-decoration: none;
+
+const Link = styled.a`
+  color: #a855f7;
   font-weight: 600;
-  text-align: center;
+  text-decoration: none;
+  margin-top: 8px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ProjectCard = ({ project }) => {
   return (
     <Card>
-      <Image src={project.image} />
-      <Tags></Tags>
-      <Details>
+      <div>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>
         <Description>{project.description}</Description>
-      </Details>
-      <Members>
-        {project.member?.map((member) => (
-          <Avatar src={member.img} />
-        ))}
-      </Members>
-      <Button href={project.github} target="_blank">
-        View Code
-      </Button>
+      </div>
+
+      {project.tech && <Tech>{project.tech.join(" • ")}</Tech>}
+
+      {project.github && (
+        <Link href={project.github} target="_blank" rel="noopener noreferrer">
+          View Code →
+        </Link>
+      )}
     </Card>
   );
 };

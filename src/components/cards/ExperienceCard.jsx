@@ -87,14 +87,25 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       icon={
-        <img
-          width="100%"
-          height="100%"
-          alt={experience?.company}
-          style={{ borderRadius: "50%", objectFit: "cover" }}
-          src={experience?.img}
-        />
-      }
+  <div
+    style={{
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      background: "radial-gradient(circle, #070d63, #10515ad7)",
+      boxShadow: "0 0 15px rgba(168,85,247,0.8)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      color: "white",
+      fontSize: "18px",
+      fontWeight: "bold",
+    }}
+  >
+    💼
+  </div>
+}
+
       contentStyle={{
         display: "flex",
         flexDirection: "column",
