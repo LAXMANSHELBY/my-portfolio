@@ -87,7 +87,7 @@ const Certifications = () => {
     {
       title: "Infosys Java Programing",
       date: "2025",
-    file: "/Infosys_Java_Programing.pdf",
+    file: "/Infosys_java_Programing.pdf",
       icon: "/favicon.ico"
     },
     {
