@@ -216,7 +216,7 @@ const Hero = () => {
               <motion.div {...headContentAnimation}>
                 <Tilt>
                   {/* ✅ PUBLIC IMAGE – NO IMPORT */}
-                  <Img src="/HeroImageLaxman.jpg" alt="Laxman Sunkari" />
+                  <Img src="/HeroImageLaxman (2).jpg" alt="Laxman Sunkari" />
                 </Tilt>
               </motion.div>
             </HeroRightContainer>

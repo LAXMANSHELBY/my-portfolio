@@ -1,19 +1,44 @@
-import { FaJava,FaGitlab, FaPython, FaReact, FaHtml5, FaCss3Alt, FaGithub, FaDocker } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss, SiDjango, SiFlask, SiMysql, SiVercel } from "react-icons/si";
+import {
+  FaJava,
+  FaPython,
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaGithub,
+  FaDocker,
+  FaBrain,
+  FaGitAlt,
+  FaRobot,
+  FaCode,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTailwindcss,
+  SiMysql,
+  SiVercel,
+  SiR,
+  SiLangchain,
+  SiOpenai,
+  SiFlutter,
+  SiKotlin,
+  SiTensorflow,
+  SiAmazondynamodb,
+  SiRender,
+} from "react-icons/si";
 
 
 export const Bio = {
   name: "Laxman Sunkari",
   roles: [
-    "Frontend Developer",
-    "AR/VR Developer ",
+    "AI Engineer",
+    "AI Application Developer ",
     " JAVA Devloper ",
     "AI Enthusiast",
   ],
   description:
     "I am a B.Tech Data Science student passionate about building modern web applications, AI-driven solutions, and immersive digital experiences. I enjoy solving real-world problems using clean, scalable, and user-focused software.",
   github: "https://github.com/LAXMANSHELBY",
-  resume:"/Laxman_CV.pdf",
+  resume:"/RenderCV_EngineeringResumes_Theme (6).pdf",
 
   linkedin: "https://linkedin.com/in/laxman-s-5447a5327",
   twitter: "https://x.com/ShelbyLaxman",
@@ -24,50 +49,49 @@ export const skills = [
   {
     title: "Languages",
     skills: [
-      { name: "JAVA CORE", icon: FaJava },
-      { name: "PYTHON", icon: FaPython },
-      { name: "SQL", icon: SiMysql },
-      { name: "R-PROGRAMING", icon: FaReact }, // change if needed
-    ],
-  },
- {
-  title: "Frontend",
-  skills: [
-    { name: "React.js", icon: FaReact },
-    { name: "HTML", icon: FaHtml5 },
-    { name: "CSS", icon: FaCss3Alt },
-    { name: "JavaScript", icon: SiJavascript },
-    { name: "Tailwind CSS", icon: SiTailwindcss },
-  ],
-},
-
-   {
-    title: "Backend",
-    skills: [
+      { name: "Java", icon: FaJava },
       { name: "Python", icon: FaPython },
-      { name: "Flask", icon: SiFlask },
-      { name: "Django", icon: SiDjango },
       { name: "SQL", icon: SiMysql },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "R", icon: SiR },
     ],
   },
   {
-  title: "DevOps & Tools",
-  skills: [
-    { name: "GitHub", icon: FaGithub },
-    { name: "Docker", icon: FaDocker },
-    { name: "GITLAB", icon: FaGitlab },
-    { name: "Vercel", icon: SiVercel },
-  ],
-}
-,
-    {
-    title: "Java Developer | Algorithmic Problem-Solving & DSA",
+    title: "Web Development",
     skills: [
-      { name: "Arrays", icon: FaJava },
-      { name: "Recursion & Backtracking", icon: FaJava },
-      { name: "Sorting & Searching", icon: FaJava },
-      { name: "Linked Lists", icon: FaJava },
-      { name: "Graph & Network Algorithms", icon: FaJava },
+      { name: "HTML", icon: FaHtml5 },
+      { name: "CSS", icon: FaCss3Alt },
+      { name: "React.js", icon: FaReact },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+    ],
+  },
+  {
+    title: "AI / Data Science",
+    skills: [
+      { name: "Machine Learning", icon: FaBrain },
+      { name: "Generative AI", icon: SiOpenai },
+      { name: "LangChain", icon: SiLangchain },
+      { name: "CrewAI", icon: FaRobot },
+    ],
+  },
+  {
+    title: "Mobile / Cloud",
+    skills: [
+      { name: "Flutter", icon: SiFlutter },
+      { name: "Kotlin", icon: SiKotlin },
+      { name: "TensorFlow Lite", icon: SiTensorflow },
+      { name: "AWS DynamoDB", icon: SiAmazondynamodb },
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      { name: "Git", icon: FaGitAlt },
+      { name: "GitHub", icon: FaGithub },
+      { name: "Docker", icon: FaDocker },
+      { name: "VS Code", icon: FaCode },
+      { name: "Vercel", icon: SiVercel },
+      { name: "Render", icon: SiRender },
     ],
   },
 ];
@@ -126,32 +150,32 @@ export const projects = [
   },
   {
     id: 1,
-    title: "3D Furniture Placement Android App",
-    date: "2024",
+    title: "Grace – Offline AI Voice Assistant",
+    date: "2025",
     description:
-      "An AR-based Android application that allows users to place 3D furniture models in real-world environments.",
+      "Built an offline AI voice assistant using Python, Vosk, LangChain, Ollama, and CrewAI capable of executing system commands, automating desktop tasks, and handling multi-agent workflows with wake-word detection and local LLM integration.",
     image: "",
-    tags: ["Unity", "AR Foundation", "C#", "Android"],
-    category: "android app",
+    tags: ["Python", "Vosk", "LangChain", "Ollama", "CrewAI", "Automation"],
+    category: "ai assistant",
     github: "",
     webapp: "",
   },
   {
     id: 2,
-    title: "Social Media Feed Analyzer",
-    date: "2023",
+    title: "P2PRescueNet – AI Driven Disaster Communication App",
+    date: "2026",
     description:
-      "A Python tool to scrape and analyze social media feeds using Pandas and BeautifulSoup.",
+      "Developed a decentralized disaster communication mobile app in Flutter and Kotlin that works without internet via Wi-Fi Direct mesh networking, uses reinforcement learning for routing, and integrates AWS DynamoDB for SOS message persistence.",
     image: "",
-    tags: ["Python", "Pandas", "BeautifulSoup"],
-    category: "data science",
+    tags: ["Flutter", "Kotlin", "Reinforcement Learning", "Mesh", "AWS DynamoDB"],
+    category: "mobile app",
     github: "",
     webapp: "",
   },
   {
     id: 3,
     title: "Personal Portfolio Website",
-    date: "2024",
+    date: "2025",
     description:
       "A modern personal portfolio built using React.js, Tailwind CSS, and 3D visuals.",
     image: "",
